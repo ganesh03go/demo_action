@@ -1,0 +1,11 @@
+name: 'Custom Action Demo'
+description: 'A custom action demo that echoes an input message'
+inputs:
+  myname:
+    description: 'The name to be echoed'
+    required: true
+    default: 'World'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "This Is custom action demo with input ${{ inputs.myname }}"
